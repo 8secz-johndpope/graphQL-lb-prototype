@@ -1,0 +1,49 @@
+{
+  "name": "powerdrive-api",
+  "version": "1.0.0",
+  "main": "build/server/server.js",
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "tslint": "tslint -p tsconfig.json",
+    "start": "node .",
+    "build": "npm run serverbuild && tsc",
+    "dev": "nodemon --ignore build/ --exec \"npm run build && npm start\" -e ts,js,json",
+    "serverbuild": "copyfiles \"server/**/*.json\" build/server -u 1 && copyfiles \"common/**/*.json\" build/common -u 1",
+    "cleanup": "rm -rf build/",
+    "posttest": "npm run lint"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.4.2",
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "dotenv": "^6.2.0",
+    "graphql": "^14.1.1",
+    "graphql-tools": "^4.0.4",
+    "helmet": "^3.10.0",
+    "loopback": "^3.22.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^6.2.0",
+    "loopback-connector-mongodb": "^3.9.2",
+    "serve-favicon": "^2.0.1",
+    "strong-error-handler": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^11.9.4",
+    "concurrently": "^4.1.0",
+    "copyfiles": "^2.1.0",
+    "eslint": "^3.17.1",
+    "eslint-config-loopback": "^8.0.0",
+    "nodemon": "^1.18.10",
+    "tslint": "^5.12.1",
+    "typescript": "^3.3.3"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "license": "UNLICENSED",
+  "description": "powerdrive-api"
+}

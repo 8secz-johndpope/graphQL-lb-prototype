@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"module": "es6",
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"outDir": "build/",
+		"rootDir": "./",
+		"sourceMap": true,
+		"noImplicitAny": true,
+		"allowJs": true
+	},
+	"include": [
+		"server/**/*",
+		"graphql/**/*",
+		"common/**/*"
+	],
+	"exclude": [
+		"node_modules",
+		"**/*.spec.ts"
+	]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Trip",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateupsert": true,
+    "mongodb": {
+      "collection": "trip"
+    }
+  },
+  "relations": {},
+  "properties": {
+    "from": {
+      "type": "string",
+      "required": true
+    },
+    "to": {
+      "type": "string",
+      "required": true
+    },
+    "planeImage": {
+      "type": "string",
+      "required": true
+    },
+    "passengers": {
+      "type": "array",
+      "required": true
+    },
+    "destinations": {
+      "type": "array",
+      "required": true
+    }
+  },
+  "validations": [],
+  "acls": [],
+  "methods": {}
+}
